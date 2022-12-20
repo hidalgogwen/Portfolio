@@ -1,0 +1,179 @@
+@import url('@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;500&display=swap);
+
+:root{
+	--main-color:#990F02;
+}
+
+* {
+	font-family: 'Josefin Sans', sans-serif;
+	box-sizing: border-box;
+  	padding: 0px;
+  	margin: 0px;
+  	outline: none; border: none;
+	text-decoration: none;
+	transition: all .2s linear;
+	line-height: 1.5;
+}
+
+html{
+	font-size: 62.5%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+}
+
+body{
+	background: #fcf2e8;
+	padding-left: 30rem;
+}
+
+section{
+    padding:1rem 5%;
+    min-height: 100vh;
+}
+
+.heading{
+    font-size: 4rem;
+    color:#111;
+    text-transform: uppercase;
+}
+
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+
+header{
+	position: fixed;
+	top:0; left:0; bottom:0;
+	background: #222;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	z-index: 1000;
+	flex-flow: column;
+	padding: 8rem 2rem;
+	width: 30rem;
+	text-align: center;
+}
+
+header .logo{
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 3rem;
+	font-weight: bolder;
+}
+
+header .logo span{
+	text-transform: uppercase;
+	color:var(--main-color);
+}
+
+header .navbar a{
+	display: block; 
+	font-size: 2rem;
+	color: #fff;
+	margin:2rem 0;
+}
+
+header .navbar a:hover{
+	letter-spacing: .2rem;
+	color:var(--main-color);
+}
+
+header .follow a{
+	font-size: 2.5rem;
+	color: #fff;
+	margin:0 .7rem;
+}
+
+header .follow a:hover{
+	color:var(--main-color);
+}
+
+#menu-bars{
+	position: fixed;
+	top:1rem; right:1rem;
+	z-index: 10000;
+	background: var(--main-color);
+	color: #fff;
+	border-radius: .5rem;
+	padding: 1rem 1.5rem;
+	font-size: 3rem;
+	cursor: pointer;
+	display: none;
+}
+
+#container {
+  max-width: 100%;
+}
+
+.description {
+	font-size: 20px;
+}
+
+.info {
+	font-size: 14px;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-gallery img {
+  max-width: 400px;
+  min-height: 220px;
+  padding: 0.5rem;
+}
+
+.footer{
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding:2.5rem;
+    text-align: center;
+    color:#666;
+    background: #fff;
+}
+
+.footer span{
+    color:var(--main-color);
+}
+
+/*media queries*/
+@media (max-width:991px){
+	html{
+		font-size: 55%;
+	}
+
+	body{
+		padding: 0;
+	}
+
+	#menu-bars{
+		display: initial;
+	}
+
+	header{
+		left:-120%;
+	}
+
+	header.active{
+		left: 0%;
+	}
+}
+
+@media (max-width:450px){
+	html{
+		font-size: 50%;
+	}
+
+	header{
+		width: 100%;
+	}
+
+	.education .box-container .box{
+        padding-right: 0;
+    }
+}
